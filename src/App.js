@@ -1,19 +1,16 @@
 import GlobalStyle from "./GlobalStyle";
 import styled from "styled-components";
 
-const ParentBox = styled.div`
-  display: flex;
-  height: 300px;
-  justify-content: center;
-  align-items: flex-start;
+const Parent = styled.div`
+  height: 100vh;
   background-color: aliceblue;
 `;
 
-const ChildBox = styled.div`
+const Child = styled.div`
   font-size: 18px;
   text-align: center;
-  width: 150px;
   height: 150px;
+  width: 150px;
   margin: 10px;
   padding: 5px;
   box-sizing: border-box;
@@ -21,19 +18,15 @@ const ChildBox = styled.div`
   background-color: dodgerblue;
 `;
 
-const GrowBox = styled(ChildBox)`
-  flex-grow: 1;
-`;
-
 function App() {
   return (
     <>
       <GlobalStyle />
-      <ParentBox>
-        <ChildBox>child 1</ChildBox>
-        <GrowBox>child 2</GrowBox>
-        <ChildBox>child 3</ChildBox>
-      </ParentBox>
+      <Parent>
+        <Child>child 1</Child>
+        <Child>chile 2</Child>
+        <Child>child 3</Child>
+      </Parent>
     </>
   );
 }
